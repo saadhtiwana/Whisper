@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whispers</title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>All Whispers</h1>
+  <% if(whispers.length > 0) { %>
+    <ul class="secret-list">
+      <% whispers.forEach(function(item){ %>
+        <li><%= item.secret %></li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No whispers available.</p>
+  <% } %>
+  <div class="buttons">
+    <a href="/submit" class="btn">Submit a Whisper</a>
+    <a href="/logout" class="btn">Logout</a>
+  </div>
+  <footer>Designed by Saad Tiwana</footer>
+</div>
+</body>
+</html>
